@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendas funcionário | Go Beyond</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <div class="flex-row">
+    <aside class="flex-col aside__image">
+      <img src="./assets/images/bg-finance.jpeg" alt="Homem no notebook fazendo calculo"
+        title="Homem no notebook fazendo calculo">
+    </aside>
+    <article class="flex-col">
+      <header>
+        <img src="./assets/images/logo-gobeyond.png" alt="Logo Go Beyond" title="Logo Go Beyond">
+        <h1>Cálculo de vendas de funcionários</h1>
+      </header>
+      <form class="form" action="">
+        <div class="form__group">
+          <input class="form__input" type="text" placeholder="Nome do funcionário">
+          <span class="msg__validate validate--name">Por favor, preencha este campo</span>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="text" placeholder="Salário fixo">
+          <span class="msg__validate validate--salario">Por favor, preencha este campo</span>
+        </div>
+        <div class="form__group">
+          <select name="mes-vendas" id="mes-vendas">
+            <option value="Janeiro">Janeiro</option>
+            <option value="Fevereiro">Fevereiro</option>
+            <option value="Março">Março</option>
+            <option value="Abril">Abril</option>
+            <option value="Maio">Maio</option>
+            <option value="Junho">Junho</option>
+            <option value="Julho">Julho</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Setembro">Setembro</option>
+            <option value="Outubro">Outubro</option>
+            <option value="Novembro">Novembro</option>
+            <option value="Dezembro">Dezembro</option>
+          </select>
+          <span class="msg__validate validate--mes-vendas">Por favor, selecione o mês</span>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="text" placeholder="Comissão">
+          <span class="msg__validate validate--comissao">Por favor, preencha este campo</span>
+        </div>
+      </form>
+    </article>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

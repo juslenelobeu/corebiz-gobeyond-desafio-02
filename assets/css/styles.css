@@ -1,0 +1,12 @@
+:root {
+  --color-primary: hsl(45, 87%, 57%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-black-95: hsl(0, 0%, 95%);
+  --color-black-50: hsl(0, 0%, 50%);
+  --color-black-20: hsl(0, 0%, 20%);
+  --color-white: hsl(100, 100%, 100%);
+}
+* { margin: 0; padding: 0; }
+body {
+  background-color: var(--color-black)
+}
