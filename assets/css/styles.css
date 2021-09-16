@@ -17,6 +17,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* custom patterns */
 .flex-row { display: flex; }
 .flex-col { display: flex; flex-direction: column; }
 .align-center { align-items: center; }
@@ -45,4 +46,45 @@ body {
 
 .btn-secondary { 
   background-color: var(--color-black-20);
+}
+
+/* header */
+.header {
+  width: 50vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}
+.header img {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+.header__full {
+  width: 100vw;
+  height: 100vh;
+}
+.highlight {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+.highlight h1 {
+  font-size: 3rem;
+  color: var(--color-black);
+  line-height: 4rem;
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  /* text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.3); */
+}
+.highlight .btn {
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
 }
