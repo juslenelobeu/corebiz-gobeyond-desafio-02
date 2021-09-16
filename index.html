@@ -7,55 +7,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vendas funcionário | Go Beyond</title>
   <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-  <div class="flex-row">
-    <aside class="flex-col aside__image">
+  <div class="flex-col" id="container">
+    <header class="header header__full">
       <img src="./assets/images/bg-finance.jpeg" alt="Homem no notebook fazendo calculo"
         title="Homem no notebook fazendo calculo">
-    </aside>
-    <article class="flex-col">
-      <header>
-        <img src="./assets/images/logo-gobeyond.png" alt="Logo Go Beyond" title="Logo Go Beyond">
-        <h1>Cálculo de vendas de funcionários</h1>
-      </header>
-      <form class="form" action="">
-        <div class="form__group">
-          <input class="form__input" type="text" placeholder="Nome do funcionário">
-          <span class="msg__validate validate--name">Por favor, preencha este campo</span>
+      <div class="headline">
+        <h1>Cálculo de vendas dos funcionários</h1>
+        <button class="btn btn-primary" id="btn-header" onclick="openForm()">Iniciar Cadastro</button>
+      </div>
+    </header>
+
+    <main class="align-center justify-center main">
+      <section class="main__form">
+        <div class="form__image">
+          <img src="./assets/images/logo-gobeyond.png" alt="Logo Go Beyond" title="Logo Go Beyond">
         </div>
-        <div class="form__group">
-          <input class="form__input" type="text" placeholder="Salário fixo">
-          <span class="msg__validate validate--salario">Por favor, preencha este campo</span>
-        </div>
-        <div class="form__group">
-          <select name="mes-vendas" id="mes-vendas">
-            <option value="Janeiro">Janeiro</option>
-            <option value="Fevereiro">Fevereiro</option>
-            <option value="Março">Março</option>
-            <option value="Abril">Abril</option>
-            <option value="Maio">Maio</option>
-            <option value="Junho">Junho</option>
-            <option value="Julho">Julho</option>
-            <option value="Agosto">Agosto</option>
-            <option value="Setembro">Setembro</option>
-            <option value="Outubro">Outubro</option>
-            <option value="Novembro">Novembro</option>
-            <option value="Dezembro">Dezembro</option>
-          </select>
-          <span class="msg__validate validate--mes-vendas">Por favor, selecione o mês</span>
-        </div>
-        <div class="form__group">
-          <input class="form__input" type="text" placeholder="Comissão">
-          <span class="msg__validate validate--comissao">Por favor, preencha este campo</span>
-        </div>
-      </form>
-    </article>
+        <form class="form" action="" id="form" name="form">
+          <div class="form__group">
+            <input class="form__input" id="input-nome" type="text" placeholder="Nome do funcionário" name="nome">
+            <span class="msg__validate validate--name">Por favor, preencha este campo</span>
+          </div>
+          <div class="form__group">
+            <input class="form__input" id="input-salario" type="number" placeholder="Salário fixo" name="salario">
+            <span class="msg__validate validate--salario">Por favor, preencha este campo</span>
+          </div>
+          <div class="form__group">
+            <input class="form__input" id="input-vendas" type="number" placeholder="Vendas do mês" name="venda">
+            <span class="msg__validate validate--vendas">Por favor, preencha este campo</span>
+          </div>
+          <div class="form__group">
+            <select class="form__input form__input--select" id="select-mes" name="mes-vendas" id="mes-vendas"
+              name="mes">
+              <option value="">Selecione o mês</option>
+              <option value="Janeiro">Janeiro</option>
+              <option value="Fevereiro">Fevereiro</option>
+              <option value="Março">Março</option>
+              <option value="Abril">Abril</option>
+              <option value="Maio">Maio</option>
+              <option value="Junho">Junho</option>
+              <option value="Julho">Julho</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Setembro">Setembro</option>
+              <option value="Outubro">Outubro</option>
+              <option value="Novembro">Novembro</option>
+              <option value="Dezembro">Dezembro</option>
+            </select>
+            <span class="msg__validate validate--mes-vendas">Por favor, selecione o mês</span>
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </section>
+    </main>
   </div>
 
-  <script src="./assets/js/main.js"></script>
+  <script src=" ./assets/js/main.js"> </script>
 </body>
 
 </html>
