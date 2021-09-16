@@ -169,3 +169,19 @@ body {
   width: 100%;
   max-width: 320px;
 }
+
+/* table */
+.main__table {
+  width: 100%;
+  color: var(--color-white);
+}
+
+.main__table th, .main__table td {
+  border: thin solid #111;
+  padding: 1rem;
+  text-align: center;
+}
+.main__table th {
+  background: var(--color-black-20);
+  border: none;
+}
