@@ -50,6 +50,8 @@ const saveForm = (e) => {
   table.classList.add("visible");
   funcionarios.push(funcionario);
 
+  // validate
+
   const tableBody = document.querySelector(".table__body");
   tableBody.innerHTML = "";
   funcionarios.forEach((item) => {
@@ -63,7 +65,32 @@ const saveForm = (e) => {
       </tr>
     `;
   });
-  console.log(funcionarios);
+
+  const msgValidateName = document.querySelector(".validate--name");
+  const msgValidateSalario = document.querySelector(".validate--salario");
+  const msgValidateVendas = document.querySelector(".validate--vendas");
+  const msgValidateMes = document.querySelector(".validate--mes-vendas");
+
+  if (!inputNome) {
+    msgValidateName.classList.add("visible");
+  } else {
+    msgValidateName.classList.remove("visible");
+  }
+  if (!inputSalario) {
+    msgValidateSalario.classList.add("visible");
+  } else {
+    msgValidateSalario.classList.remove("visible");
+  }
+  if (!inputVendas) {
+    msgValidateVendas.classList.add("visible");
+  } else {
+    msgValidateVendas.classList.remove("visible");
+  }
+  if (!inputMes) {
+    msgValidateMes.classList.add("visible");
+  } else {
+    msgValidateMes.classList.remove("visible");
+  }
 };
 
 const form = document.querySelector("#form");

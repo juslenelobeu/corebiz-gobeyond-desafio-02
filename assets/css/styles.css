@@ -171,6 +171,16 @@ body {
 }
 
 /* table */
+.table {
+  display: none;
+  width: 80%;
+  margin-top: 2rem;
+}
+.table.visible {
+  display: flex;
+  flex-direction: column;
+}
+
 .main__table {
   width: 100%;
   color: var(--color-white);
