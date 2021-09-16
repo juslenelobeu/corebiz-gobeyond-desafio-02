@@ -40,6 +40,7 @@ body {
 .btn:hover {
   transform: scale(1.1);
 }
+
 .btn-primary {
   background-color: var(--color-primary);
 }
@@ -67,6 +68,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
 .highlight {
   position: absolute;
   display: flex;
@@ -87,4 +89,66 @@ body {
 }
 .highlight .btn {
   box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
+}
+
+/* form */
+.main__form {
+  background-color: #111;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__image {
+  background-color: var(--color-black-95);
+  width: 100%;
+  text-align: center;
+}
+.form__image img {
+  width: 100%;
+  max-width: 400px;
+}
+.form {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+.form__input {
+  padding: 1rem;
+  width: 287px;
+  border: none;
+  outline: none;
+}
+.form__input::placeholder, .form__input--select {
+  color: var(--color-black-50)
+}
+.form__input--select {
+  width: 320px;
+}
+
+/* msg validate */
+.msg__validate {
+  display: none;
+}
+.msg__validate.visible {
+  display: flex;
+  color: var(--color-danger);
+  font-size: .8rem;
+  padding: .5rem;
+  border: thin solid var(--color-danger);
+}
+
+.main__form .btn {
+  width: 100%;
+  max-width: 320px;
 }
