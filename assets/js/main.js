@@ -39,16 +39,19 @@ const saveForm = (e) => {
 
   const table = document.querySelector(".table");
 
-  const funcionario = {
-    nome: inputNome,
-    salario: inputSalario,
-    vendas: inputVendas,
-    comissao: (10 / 100) * inputVendas,
-    mes: inputMes,
-  };
+  if (inputNome && inputSalario && inputVendas && inputMes) {
+    const funcionario = {
+      nome: inputNome,
+      salario: inputSalario,
+      vendas: inputVendas,
+      comissao: (10 / 100) * inputVendas,
+      mes: inputMes,
+    };
 
-  table.classList.add("visible");
-  funcionarios.push(funcionario);
+    table.classList.add("visible");
+    funcionarios.push(funcionario);
+    console.log(funcionarios);
+  }
 
   // validate
 
