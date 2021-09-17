@@ -24,6 +24,13 @@ const closeForm = () => {
   main.style.display = "none";
 };
 
+const formatValueForReal = (value) => {
+  return value.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+};
+
 let funcionarios = [];
 
 const saveForm = (e) => {
@@ -50,25 +57,12 @@ const saveForm = (e) => {
 
     table.classList.add("visible");
     funcionarios.push(funcionario);
-    console.log(funcionarios);
+
+    render(funcionarios);
+    saveLocalStorage(funcionarios);
   }
 
   // validate
-
-  const tableBody = document.querySelector(".table__body");
-  tableBody.innerHTML = "";
-  funcionarios.forEach((item) => {
-    tableBody.innerHTML += `
-      <tr>
-        <td>${item.nome}</td>
-        <td>${item.mes}</td>
-        <td>${item.salario.toFixed(2)}</td>
-        <td>${item.vendas.toFixed(2)}</td>
-        <td>${(item.comissao + item.salario).toFixed(2)}</td>
-      </tr>
-    `;
-  });
-
   const msgValidateName = document.querySelector(".validate--name");
   const msgValidateSalario = document.querySelector(".validate--salario");
   const msgValidateVendas = document.querySelector(".validate--vendas");
@@ -94,6 +88,27 @@ const saveForm = (e) => {
   } else {
     msgValidateMes.classList.remove("visible");
   }
+};
+
+const render = (array) => {
+  const tableBody = document.querySelector(".table__body");
+  tableBody.innerHTML = "";
+  array.forEach((item) => {
+    tableBody.innerHTML += `
+      <tr>
+        <td>${item.nome}</td>
+        <td>${item.mes}</td>
+        <td>${formatValueForReal(item.salario)}</td>
+        <td>${formatValueForReal(item.vendas)}</td>
+        <td>${formatValueForReal(item.comissao + item.salario)}</td>
+      </tr>
+    `;
+  });
+};
+
+const saveLocalStorage = (array) => {
+  const convertValues = JSON.stringify(array);
+  localStorage.setItem("Funcionarios", convertValues);
 };
 
 const form = document.querySelector("#form");
