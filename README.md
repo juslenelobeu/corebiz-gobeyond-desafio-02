@@ -63,7 +63,7 @@ exibir tabela com:
 
 ### ✅ I learned
 
-Trabalhei bastante com `flexbox` para fazer as modificações com as ações dos botões e redimensionamento de telas com `JavaScript` e `CSS`
+Trabalhei bastante com `flexbox` para fazer as modificações com as ações dos botões e redimensionamento de telas com `JavaScript` e `CSS`.
 
 ## ✨ Features <a name = "features"></a>
 
